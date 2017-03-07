@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307174733) do
+ActiveRecord::Schema.define(version: 20170307211536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20170307174733) do
     t.float    "mileage"
     t.datetime "beginning_time"
     t.datetime "end_time"
-    t.time     "duration"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.float    "duration_in_secs"
     t.index ["user_id"], name: "index_runs_on_user_id", using: :btree
   end
 
