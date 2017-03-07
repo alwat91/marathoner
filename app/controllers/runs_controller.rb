@@ -6,7 +6,7 @@ class RunsController < ApplicationController
     new_run = current_user.runs.new(time_handler)
 
     if new_run.save
-      render json: {status: 202, message: "Run created"}
+      render json: {status: 202, runs: current_user.runs}
     else
       render json: {status: 422, error: new_run.errors}
     end
