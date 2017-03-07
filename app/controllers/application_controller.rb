@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
 
   def authorize
     # Check to see if the current user id equals the request user id, and renders unauthorized if they don't match.
-    render json: {status: 401, message: "unauthorized"} unless current_user.id == params[:id].to_i
+    render json: {status: 401, message: "unauthorized"} unless current_user.id == params[:id].to_i || current_user.id == params[:user_id].to_i
   end
 
   def bearer_token
