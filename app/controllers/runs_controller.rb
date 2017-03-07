@@ -19,9 +19,9 @@ class RunsController < ApplicationController
   def update
     run = current_user.runs.find(params[:id])
 
-    run.update(run_params)
+    run.update(time_handler)
 
-    render json: { status: 200, runs: current_user.runs}
+    render json: { status: 200, runs: current_user.runs }
 
   end
 
