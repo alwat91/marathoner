@@ -1,5 +1,5 @@
 # Marathoner
-This is a lightweight sight for keeping track of runs
+This is a lightweight app for keeping track of runs
 
 ## ERD
 
