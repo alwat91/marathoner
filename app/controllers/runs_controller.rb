@@ -1,9 +1,6 @@
 class RunsController < ApplicationController
   before_action :authorize
 
-  def duration_in_secs
-  run_params[:end_time].to_time - run_params[:beginning_time].to_time
-  end
 
   def create
     new_run = current_user.runs.new({
@@ -20,6 +17,15 @@ class RunsController < ApplicationController
     end
   end
 
+  def index
+    render json: { status: 200, runs: current_user.runs }
+  end
+
+  private
+
+  def duration_in_secs
+    run_params[:end_time].to_time - run_params[:beginning_time].to_time
+  end
 
   def run_params
     params.require(:run).permit(:mileage, :beginning_time, :end_time)
