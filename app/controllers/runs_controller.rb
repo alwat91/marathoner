@@ -25,6 +25,16 @@ class RunsController < ApplicationController
 
   end
 
+  def destroy
+    run = current_user.runs.find(params[:id])
+
+    if run.destroy
+      render json: { status: 204, runs: current_user.runs }
+    else
+      render json: { status: 400, errors: run.errors }
+    end
+  end
+
   private
 
   def time_handler
