@@ -24,3 +24,13 @@ end_time: String,
 duration: String
 belongs_to user
 ```
+
+## Wireframes
+
+### Home Page
+
+### Edit Run 
+### New Run
+### Runs index
+### Sign in
+### Sign up
