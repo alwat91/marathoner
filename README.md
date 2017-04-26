@@ -1,5 +1,5 @@
 # Marathoner
-This is a lightweight app for keeping track of runs
+This is a lightweight app for keeping track of runs. Front end repo: https://github.com/alwat91/marathoner-ui
 
 ## ERD
 
